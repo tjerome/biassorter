@@ -594,7 +594,7 @@ font-family: 'Times New Roman', erif;
 
 <body text="#000000" bgcolor="#ffffff" link="#e097d9" vlink="#e097d9" alink="#79a2c9">
 
-
+<div class="allcontent">
 
 <div class="instructions">
 
@@ -702,6 +702,7 @@ function addCustom(){
   </center>
 </div>
 
+</div>
 <script>
  $('#credits').click(function(){
    alert("Used with permission. Code created by biasorter on tumblr.");
@@ -709,12 +710,25 @@ function addCustom(){
 </script>
 
 <style>
+
+  html {
+    height: 100% !important;
+  }
+
   body{
-    margin-top: 25%;
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
     color: #11144c;
     background-color: #fabc60;
+    height: 100% !important;
+    display: table;
+    align-items: center;
+    vertical-align: middle;
+  }
+
+  .allcontent {
+    display: table-cell;
+    vertical-align: middle;
   }
 
   #instructiontext {
@@ -764,7 +778,7 @@ function addCustom(){
   }
 
   .resulttable {
-    width: 400px !important;
+    width: 350px !important;
     font-size: x-large !important;
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
