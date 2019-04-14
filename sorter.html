@@ -735,15 +735,29 @@ function addCustom(){
   #mainTable {
     font-size: 30px !important;
     width: 610px !important;
+    table-layout: fixed !important;
   }
 
-  #leftField {
-    word-wrap: break-word;
+  #mainTable > td {
+    width: 190px !important
   }
 
-  #rightField {
-    word-wrap: break-word;
+  td#leftField {
+    word-wrap: break-word !important;
+    max-width: 190px !important;
   }
+
+  .middleField {
+    word-wrap: break-word !important;
+    min-width: 120px !important;
+    max-width: 120px !important;
+  }
+
+  td#rightField {
+    word-wrap: break-word !important;
+    max-width: 190px !important;
+  }
+
 
   .picktable > tr {
     height: 120px !important;
