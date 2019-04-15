@@ -3,7 +3,11 @@
 
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
 </head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
@@ -439,6 +443,7 @@ str += "<\/table>";
 
 
 document.getElementById("resultField").innerHTML = str;
+document.getElementById("mainTable").style.display = "none";
 
 }
 
@@ -454,6 +459,7 @@ var str1 = ""+toNameFace(lstMember[cmp1][head1]);
 
 var str2 = ""+toNameFace(lstMember[cmp2][head2]);
 
+var battletable =
 
 
 document.getElementById("battleNumber").innerHTML = str0;
@@ -462,6 +468,7 @@ document.getElementById("leftField").innerHTML = str1;
 
 document.getElementById("rightField").innerHTML = str2;
 
+document.getElementById("")
 
 
 numQuestion++;
@@ -694,6 +701,12 @@ function addCustom(){
 
 </script>
 
+<div class="resetBtn">
+  <a href="/index.html" id="reset">
+    <button type="button" class="btn btn-primary btn-lg startbtn">RESET</button>
+  </a>
+</div>
+
 <div id="credits">
   <center>
     <small>
@@ -790,6 +803,24 @@ function addCustom(){
 
   .resulttable {
     height: 250px !important;
+  }
+
+  .btn {
+    display: block;
+    background-color: #3a9679 !important;
+    border-color: #3a9679 !important;
+    margin-left: auto;
+    margin-right: auto;
+    height: 3em;
+    width: 6em;
+    font-size: 1.3rem;
+  }
+
+  .resetBtn {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 4%;
   }
 
   #credits {
