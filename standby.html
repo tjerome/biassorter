@@ -15,7 +15,7 @@
     // Handler for .ready() called.
     window.setTimeout(function () {
         location.href = "/sorter.html";
-    }, 2500);
+    }, 250000000);
     });
   </script>
 
@@ -28,7 +28,7 @@
   </div>
 
   <div class="imageload">
-    <img src="LoadingBasketContents.gif">
+    <img src="loading7.gif">
   </div>
 
 </div>
@@ -40,15 +40,22 @@
 
 <style>
 
+html {
+  height: 100vh !important;
+}
+
 body {
+  height: 100vh !important;
+  display: grid !important;
   background-color: #fabc60;
+  align-items: center !important;
+  vertical-align: middle !important;
   text-align: center;
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
 }
 
 #headers{
-  margin-top: 50%;
   font-family: 'Permanent Marker', cursive;
   color: #11144c;
 }
@@ -67,7 +74,44 @@ h2 {
 }
 
 img{
+  height: 300px;
+  width: auto;
   margin-top:4%;
+
+}
+
+@media only screen and (min-width: 992px) {
+
+  body {
+    margin-top: 0% !important;
+    height: 100vh !important;
+    background-color: #fabc60;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+  }
+
+  #headers{
+    font-family: 'Permanent Marker', cursive;
+    color: #11144c;
+  }
+
+  h1 {
+    font-size: 72px;
+  }
+
+  h2 {
+    font-size: 38px;
+  }
+
+  #imageload {
+    margin-top: 4%;
+    margin-bottom: 4%;
+  }
+
+  img{
+    margin-top:4%;
+  }
 }
 
 </style>

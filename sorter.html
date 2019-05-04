@@ -651,7 +651,7 @@ no opinion
 
 </tbody></table>
 
-<br><br>
+<br>
 
 <div id="resultField" style="text-align: center;">
 
@@ -725,14 +725,14 @@ function addCustom(){
 <style>
 
   html {
-    height: 100% !important;
+    height: 100vh !important;
   }
 
   body{
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
     color: #11144c;
-    background-color: #fabc60;
+    background-color: #fabc60 !important;
     height: 100% !important;
     display: table;
     align-items: center;
@@ -804,6 +804,7 @@ function addCustom(){
 
   .resulttable {
     height: 250px !important;
+    margin-bottom: 8% !important;
   }
 
   .btn {
@@ -818,7 +819,7 @@ function addCustom(){
   }
 
   .resetBtn {
-    width: 100%;
+    font-size: 1rem;
     margin-left: 0;
     margin-right: 0;
     margin-top: 14%;
@@ -828,6 +829,59 @@ function addCustom(){
     margin-top: 12%;
     color: #3a9679;
   }
+
+  @media only screen and (min-width: 992px) {
+
+    body{
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      color: #11144c;
+      background-color: #fabc60 !important;
+      height: 100% !important;
+      display: table;
+      align-items: center;
+      vertical-align: middle;
+    }
+
+    .allcontent {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    #instructiontext {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      color: #11144c;
+      font-size: 24px;
+    }
+
+    #instructiontext h2 {
+      margin-bottom: 5%;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 400;
+      color: #11144c;
+      font-size: 50px;
+      letter-spacing: -1;
+    }
+
+    #mainTable {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      font-size: 30px !important;
+      width: 610px !important;
+      table-layout: fixed !important;
+    }
+
+    .resetBtn {
+      font-size: 1rem;
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 3%;
+    }
+
+  }
+
+ }
 </style>
 
 </body>
