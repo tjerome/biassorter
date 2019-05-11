@@ -701,6 +701,12 @@ function addCustom(){
 
 </script>
 
+<div class="softreset">
+  <p id="softreset">
+    If you messed up and want to restart your ranking here, please refresh the page. Your list will be saved and ranking will start over.
+  </p>
+</div>
+
 <div class="resetBtn">
   <a href="/index.html" id="reset">
     <button type="button" class="btn btn-primary btn-lg startbtn">RESET</button>
@@ -718,7 +724,7 @@ function addCustom(){
 </div>
 <script>
  $('#credits').click(function(){
-   alert("Used with permission. Code created by biasorter on tumblr.");
+   alert("Used with permission. Code created by biasorter on Tumblr.");
  });
 </script>
 
@@ -802,6 +808,10 @@ function addCustom(){
     color: #11144c;
   }
 
+  .softreset{
+    text-align: center;
+  }
+
   .resulttable {
     height: 250px !important;
     margin-bottom: 8% !important;
@@ -870,6 +880,11 @@ function addCustom(){
       font-size: 30px !important;
       width: 610px !important;
       table-layout: fixed !important;
+    }
+
+    .softreset{
+      text-align: center;
+      margin-bottom: 6% !important;
     }
 
     .resetBtn {
