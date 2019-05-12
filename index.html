@@ -89,6 +89,13 @@ $('#nextPage').on('click', function(){
     sessionStorage.setItem('namMember', JSON.stringify(namMember));
 });
 
+$(document).ready(function(){
+    $('#inputText').keypress(function(e){
+      if(e.keyCode==13)
+      $('.addItem').click();
+    });
+});
+
 </script>
 
 
