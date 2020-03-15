@@ -65,7 +65,7 @@
           <a href="#" class="list-group-item list-group-item-action">DIA</a>
           <a href="#" class="list-group-item list-group-item-action">DREAMCATCHER</a>
           <a href="#" class="list-group-item list-group-item-action">DREAMNOTE</a>
-          <a href="#" class="list-group-item list-group-item-action">ELRIS</a>
+          <a href="/sorter.html" id="elris" class="list-group-item list-group-item-action">ELRIS</a>
           <a href="#" class="list-group-item list-group-item-action">EVERGLOW</a>
           <a href="#" class="list-group-item list-group-item-action">EXID</a>
           <a href="#" class="list-group-item list-group-item-action">FAVORITE</a>
@@ -215,6 +215,12 @@
   });
 </script>
 
+<script>
+  $('#elris').on('click', function() {
+    var namMember = ['sohee','hyeseong','bella','yukyung','karin','ej','chaejeong'];
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
+  });
+</script>
 
 <style>
 
