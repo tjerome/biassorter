@@ -738,6 +738,13 @@ function addCustom(){
  });
 </script>
 
+<script>
+$('#reset').on('click', function() {
+  var namMember = [];
+  sessionStorage.setItem('namMember', JSON.stringify(namMember));
+});
+</script>
+
 <style>
 
   html {
