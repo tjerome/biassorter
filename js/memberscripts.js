@@ -201,6 +201,7 @@
   $('#hinapia').on('click', function() {
     var namMember = ['Minkyeung','Yaebin','Gyeongwon','Eunwoo','Bada'];
     sessionStorage.setItem('namMember', JSON.stringify(namMember));
+  });
 
   $('#hub').on('click', function() {
     var namMember = ['RUI','Hyosun','Seoryeong','Yein','Chaehee'];
