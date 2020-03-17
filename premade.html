@@ -65,7 +65,7 @@
           <a href="#" id="dreamcatcher" class="list-group-item list-group-item-action">DREAMCATCHER</a>
           <a href="#" id="dreamnote" class="list-group-item list-group-item-action">DREAMNOTE</a>
           <a href="/sorter.html" id="elris" class="list-group-item list-group-item-action">ELRIS</a>
-          <a href="#" id="everglow" class="list-group-item list-group-item-action">EVERGLOW</a>
+          <a href="/sorter.html" id="everglow" class="list-group-item list-group-item-action">EVERGLOW</a>
           <a href="#" id="exid" class="list-group-item list-group-item-action">EXID</a>
           <a href="#" id="favorite" class="list-group-item list-group-item-action">FAVORITE</a>
           <a href="#" id="fiestar" class="list-group-item list-group-item-action">FIESTAR</a>
@@ -218,6 +218,11 @@
 <script>
   $('#elris').on('click', function() {
     var namMember = ['Sohee','Hyeseong','Yukyung','Karin','Bella','Chaejeong','EJ'];
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
+  });
+
+  $('#everglow').on('click', function() {
+    var namMember = ['Yiren','Mia','EU','Onda','Aisha','Sihyeon'];
     sessionStorage.setItem('namMember', JSON.stringify(namMember));
   });
 </script>
