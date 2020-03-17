@@ -1,4 +1,3 @@
-<script>
   $('#2eyes').on('click', function() {
     var namMember = ['Hyangsuk','Dasom','Hyerin','Daeun'];
     sessionStorage.setItem('namMember', JSON.stringify(namMember));
@@ -282,5 +281,3 @@
     var namMember = ['Hyojung','Mimi','YooA','Seunghee','Binnie','Arin','Jiho'];
     sessionStorage.setItem('namMember', JSON.stringify(namMember)});
   });
-
-  </script>
