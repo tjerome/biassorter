@@ -200,84 +200,84 @@
 
   $('#hinapia').on('click', function() {
     var namMember = ['Minkyeung','Yaebin','Gyeongwon','Eunwoo','Bada'];
-    sessionStorage.setItem('namMember', JSON.stringify(namMember)});
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
 
   $('#hub').on('click', function() {
     var namMember = ['RUI','Hyosun','Seoryeong','Yein','Chaehee'];
-    sessionStorage.setItem('namMember', JSON.stringify(namMember)});
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
   });
 
   $('#ioi').on('click', function() {
     var namMember = ['Sejeong','Yeonjeong','Chungha','Chaeyeon','Kyulkyung','Yoojung','Doyeon','Somi','Mina','Sohye','Nayoung'];
-    sessionStorage.setItem('namMember', JSON.stringify(namMember)});
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
   });
 
   $('#itzy').on('click', function() {
     var namMember = ['Yeji','Ryujin','Chaeryoung','Yuna','Lia'];
-    sessionStorage.setItem('namMember', JSON.stringify(namMember)});
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
   });
 
   $('#izone').on('click', function() {
     var namMember = ['Wonyoung','Sakura','Chaeyeon','Minju','Chaewon','Nako','Yena','Yujin','Eunbi','Yuri','Hitomi','Hyewon'];
-    sessionStorage.setItem('namMember', JSON.stringify(namMember)});
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
   });
 
   $('#kara').on('click', function() {
     var namMember = ['Gyuri','Hara','Seungyeon','Youngi'];
-    sessionStorage.setItem('namMember', JSON.stringify(namMember)});
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
   });
 
   $('#laboum').on('click', function() {
     var namMember = ['Yujeong','Soyeon','ZN','Haein','Solbin'];
-    sessionStorage.setItem('namMember', JSON.stringify(namMember)});
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
   });
 
   $('#ladiescode').on('click', function() {
     var namMember = ['Ashley','Sojung','Zuny'];
-    sessionStorage.setItem('namMember', JSON.stringify(namMember)});
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
   });
 
   $('#loona').on('click', function() {
     var namMember = ['Heejin','Hyunjin','Haseul','Vivi','Yeojin','Jinsoul','Kim Lip','Choerry','Gowon','Yves','Chuu','Olivia Hye'];
-    sessionStorage.setItem('namMember', JSON.stringify(namMember)});
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
   });
 
   $('#lovelyz').on('click', function() {
     var namMember = ['Kei','Yein','Mijoo','Jisoo','Sujeong','Jiae','Babysoul','Jin'];
-    sessionStorage.setItem('namMember', JSON.stringify(namMember)});
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
   });
 
   $('#mamamoo').on('click', function() {
     var namMember = ['Solar','Hwasa','Wheein','Moonbyul'];
-    sessionStorage.setItem('namMember', JSON.stringify(namMember)});
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
   });
 
   $('#missa').on('click', function() {
     var namMember = ['Fei','Suzy','Min','Jia'];
-    sessionStorage.setItem('namMember', JSON.stringify(namMember)});
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
   });
 
   $('#melodyday').on('click', function() {
     var namMember = ['Chahee','Yeo Eun','Yoomin','Yein'];
-    sessionStorage.setItem('namMember', JSON.stringify(namMember)});
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
   });
 
   $('#momoland').on('click', function() {
     var namMember = ['Nancy','Yeonwoo','Jooe','Hyebin','Ahin','Daisy','Nayun','Jane'];
-    sessionStorage.setItem('namMember', JSON.stringify(namMember)});
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
   });
 
   $('#nature').on('click', function() {
     var namMember = ['Saebom','Sohee','Uchae','Aurora','Lu','Chaebin','Haru','Loha','Sunshine'];
-    sessionStorage.setItem('namMember', JSON.stringify(namMember)});
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
   });
 
   $('#neonpunch').on('click', function() {
     var namMember = ['Dayeon','Baek Ah','May','Iaan','Dohee'];
-    sessionStorage.setItem('namMember', JSON.stringify(namMember)});
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
   });
 
   $('#ohmygirl').on('click', function() {
     var namMember = ['Hyojung','Mimi','YooA','Seunghee','Binnie','Arin','Jiho'];
-    sessionStorage.setItem('namMember', JSON.stringify(namMember)});
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
   });
