@@ -102,25 +102,25 @@
           <a href="/sorter.html" id="ohmygirl" class="list-group-item list-group-item-action">OH MY GIRL</a>
         </div>
         <div class="groupTables">
-          <a href="/sorter.html" class="list-group-item list-group-item-action">PINK FANTASY</a>
-          <a href="/sorter.html" class="list-group-item list-group-item-action">PLAYBACK</a>
-          <a href="/sorter.html" class="list-group-item list-group-item-action">PRISTIN</a>
-          <a href="/sorter.html" class="list-group-item list-group-item-action">PURPLEBECK</a>
-          <a href="/sorter.html" class="list-group-item list-group-item-action">RAINBOW</a>
-          <a href="/sorter.html" class="list-group-item list-group-item-action">RED VELVET</a>
-          <a href="/sorter.html" class="list-group-item list-group-item-action">ROCKET PUNCH</a>
-          <a href="/sorter.html" class="list-group-item list-group-item-action">SATURDAY</a>
-          <a href="/sorter.html" class="list-group-item list-group-item-action">SECRET</a>
-          <a href="/sorter.html" class="list-group-item list-group-item-action">S.I.S</a>
-          <a href="/sorter.html" class="list-group-item list-group-item-action">SISTAR</a>
-          <a href="/sorter.html" class="list-group-item list-group-item-action">SONAMOO</a>
-          <a href="/sorter.html" class="list-group-item list-group-item-action">STELLAR</a>
-          <a href="/sorter.html" class="list-group-item list-group-item-action">T-ARA</a>
-          <a href="/sorter.html" class="list-group-item list-group-item-action">TWICE</a>
-          <a href="/sorter.html" class="list-group-item list-group-item-action">UNI.T</a>
-          <a href="/sorter.html" class="list-group-item list-group-item-action">WEKI MEKI</a>
-          <a href="/sorter.html" class="list-group-item list-group-item-action">WJSN</a>
-          <a href="/sorter.html" class="list-group-item list-group-item-action">WONDER GIRLS</a>
+          <a href="/sorter.html" id="pinkfantasy" class="list-group-item list-group-item-action">PINK FANTASY</a>
+          <a href="/sorter.html" id="playback" class="list-group-item list-group-item-action">PLAYBACK</a>
+          <a href="/sorter.html" id="pristin" class="list-group-item list-group-item-action">PRISTIN</a>
+          <a href="/sorter.html" id="purplebeck" class="list-group-item list-group-item-action">PURPLEBECK</a>
+          <a href="/sorter.html" id="rainbow" class="list-group-item list-group-item-action">RAINBOW</a>
+          <a href="/sorter.html" id="redvelvet" class="list-group-item list-group-item-action">RED VELVET</a>
+          <a href="/sorter.html" id="rocketpunch" class="list-group-item list-group-item-action">ROCKET PUNCH</a>
+          <a href="/sorter.html" id="saturday" class="list-group-item list-group-item-action">SATURDAY</a>
+          <a href="/sorter.html" id="secret" class="list-group-item list-group-item-action">SECRET</a>
+          <a href="/sorter.html" id="sis" class="list-group-item list-group-item-action">S.I.S</a>
+          <a href="/sorter.html" id="sistar" class="list-group-item list-group-item-action">SISTAR</a>
+          <a href="/sorter.html" id="sonamoo" class="list-group-item list-group-item-action">SONAMOO</a>
+          <a href="/sorter.html" id="stellar" class="list-group-item list-group-item-action">STELLAR</a>
+          <a href="/sorter.html" id="tara" class="list-group-item list-group-item-action">T-ARA</a>
+          <a href="/sorter.html" id="twice" class="list-group-item list-group-item-action">TWICE</a>
+          <a href="/sorter.html" id="unit" class="list-group-item list-group-item-action">UNI.T</a>
+          <a href="/sorter.html" id="wekimeki" class="list-group-item list-group-item-action">WEKI MEKI</a>
+          <a href="/sorter.html" id="wjsn" class="list-group-item list-group-item-action">WJSN</a>
+          <a href="/sorter.html" id="wondergirls" class="list-group-item list-group-item-action">WONDER GIRLS</a>
         </div>
 
       </div>
@@ -499,6 +499,96 @@
 
   $('#ohmygirl').on('click', function() {
     var namMember = ['Hyojung','Mimi','YooA','Seunghee','Binnie','Arin','Jiho'];
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
+  });
+
+  $('#pinkfantasy').on('click', function() {
+    var namMember = ['Aini','SangA','SeeA','Yechan','Arang','Yubin','Harin','Daewang'];
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
+  });
+
+  $('#playback').on('click', function() {
+    var namMember = ['Woolim','Yunji','Hayoung','Yujin','Eunjin'];
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
+  });
+
+  $('#pristin').on('click', function() {
+    var namMember = ['Nayoung','Roa','Yuha','Eunwoo','Rena','Kyulkyung','Yehana','Sungyeon','Xiyeon','Kyla'];
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
+  });
+
+  $('#purplebeck').on('click', function() {
+    var namMember = ['Layeon','Seyeon','Mini','Yeowool','Yerim'];
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
+  });
+
+  $('#rainbow').on('click', function() {
+    var namMember = ['Jaekyung','Woori','Seungah','Noeul','Yoonhye','Jisook','Hyunyoung'];
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
+  });
+
+  $('#redvelvet').on('click', function() {
+    var namMember = ['Irene','Seulgi','Joy','Wendy','Yeri'];
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
+  });
+
+  $('#rocketpunch').on('click', function() {
+    var namMember = ['Juri','Yeonhee','Suyun','Yunkyoung','Sohee','Dahyun'];
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
+  });
+
+  $('#saturday').on('click', function() {
+    var namMember = ['Juyeon','Haneul','Ayeon','Yuki','Minseo'];
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
+  });
+
+  $('#sis').on('click', function() {
+    var namMember = ['Minzy','Gaeul','Anne','Sebin'];
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
+  });
+
+  $('#sistar').on('click', function() {
+    var namMember = ['Hyolyn','Soyou','Bora','Dasom'];
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
+  });
+
+  $('#sonamoo').on('click', function() {
+    var namMember = ['Minjae','D.ana','Euijin','High.D','NewSun'];
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
+  });
+
+  $('#stellar').on('click', function() {
+    var namMember = ['Minhee','Hyoeun','Soyoung','Youngheun','Gayoung','Jeonyul'];
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
+  });
+
+  $('#tara').on('click', function() {
+    var namMember = ['Hyomin','Qri','Eunjung','Jiyeon','Boram','Soyeon'];
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
+  });
+
+  $('#twice').on('click', function() {
+    var namMember = ['Nayeon','Tzuyu','Sana','Dahyun','Mina','Momo','Jihyo','Chaeyoung','Jeongyeon'];
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
+  });
+
+  $('#unit').on('click', function() {
+    var namMember = ['Yebin','Yoonjo','Suji','Jiwon','NC.A','Woohee','Euijin','Hyunjoo','ZN'];
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
+  });
+
+  $('#wekimeki').on('click', function() {
+    var namMember = ['Yoojung','Doyeon','Lucy','Rina','Sei','Elly','Lua','Suyeon'];
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
+  });
+
+  $('#wjsn').on('click', function() {
+    var namMember = ['Bona','Luda','Yeonjeong','Eunseo','Seola','Soobin','Dawon','Cheng Xiao','Mei Qi','Xuan Yi','Yeoreum','Exy'];
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
+  });
+
+  $('#wondergirls').on('click', function() {
+    var namMember = ['Sunmi','Yeeun','Yubin','Hyelim','Binnie','Arin','Jiho'];
     sessionStorage.setItem('namMember', JSON.stringify(namMember));
   });
 
