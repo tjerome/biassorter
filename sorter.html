@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="slideout/dist/slideout.min.js"></script>
 
   <script data-ad-client="ca-pub-9408493636175953" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
@@ -611,6 +612,7 @@ font-family: 'Times New Roman', erif;
 
 <body text="#000000" bgcolor="#ffffff" link="#e097d9" vlink="#e097d9" alink="#79a2c9">
 
+  <!-- slideout menu slideout.js -->
   <nav id="menu">
     <ul>
       <li><a id="menulink" href="">ABOUT</a></li>
@@ -621,7 +623,7 @@ font-family: 'Times New Roman', erif;
     </ul>
   </nav>
 
-<div class="allcontent">
+<div id="panel" class="customize" style="text-align:center">
 
   <button class="btn-hamburger js-slideout-toggle">
     <span class="tooltips">MORE</span>
@@ -632,7 +634,7 @@ font-family: 'Times New Roman', erif;
 <center id="instructiontext"><br /><br />
 <h2>RESULTS</h2>
   You know the drill! For each comparison, choose who you like best between the two listed. <br />
-  NOTE: Hitting 'No Opinion' or 'I like both' too frequently will lower the accuracy of your ranking.<br /><br />
+  <p id="notetext">NOTE: Hitting 'No Opinion' or 'I like both' too frequently will lower the accuracy of your ranking.</p><br /><br />
 </center>
 
 
@@ -745,7 +747,6 @@ function addCustom(){
     </small>
   </center>
 </div>
-
 </div>
 <script>
  $('#credits').click(function(){
@@ -760,125 +761,47 @@ $('#reset').on('click', function() {
 });
 </script>
 
+<!-- slideout script  -->
+
+<script>
+  var slideout = new Slideout({
+    'panel': document.getElementById('panel'),
+    'menu': document.getElementById('menu'),
+    'padding': 400,
+    'tolerance': 70
+  });
+</script>
+
+<script>
+  $('.js-slideout-toggle').on('click', function() {
+      slideout.toggle();
+  });
+</script>
+
 <style>
 
   html {
     height: 100vh !important;
   }
 
-  body{
-    font-family: 'Market_Deco', Arial, sans-serif;
-    font-weight: 300;
-    color: #fff;
-    background-color: #fff !important;
+  body {
+    background-color: #f1f2f6 !important;
     height: 100% !important;
     display: table;
-    align-items: center;
-    vertical-align: middle;
+    align-items: center !important;
+    vertical-align: middle !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
   }
 
-  .allcontent {
+  .customize {
+    max-width: 68%;
+    margin-left: auto !important;
+    margin-right: auto !important;
     display: table-cell;
     vertical-align: middle;
   }
-
-  #instructiontext {
-    font-family: 'Market_Deco', Arial, sans-serif;
-    font-weight: 300;
-    color: ##2f3542;
-    font-size: 26px;
-  }
-
-  #instructiontext h2 {
-    margin-bottom: 5%;
-    font-family: 'Market_Deco', Arial, sans-serif;
-    font-weight: 400;
-    color: #ff4757;
-    font-size: 68px;
-    letter-spacing: -1;
-  }
-
-  #mainTable {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 300;
-    font-size: 30px !important;
-    width: 610px !important;
-    table-layout: fixed !important;
-  }
-
-  #mainTable > td {
-    width: 190px !important
-  }
-
-  td#leftField {
-    word-wrap: break-word !important;
-    max-width: 190px !important;
-  }
-
-  .middleField {
-    word-wrap: break-word !important;
-    min-width: 120px !important;
-    max-width: 120px !important;
-  }
-
-  td#rightField {
-    word-wrap: break-word !important;
-    max-width: 190px !important;
-  }
-
-
-  .picktable > tr {
-    height: 120px !important;
-  }
-
-  .resulttable {
-    line-height: normal !important;
-    width: 350px !important;
-    font-size: 28px !important;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 300;
-    color: #2f3542;
-  }
-
-  .softreset{
-    text-align: center;
-  }
-
-  .resulttable {
-    height: 250px !important;
-    margin-bottom: 8% !important;
-  }
-
-  #resultField {
-    font-family: 'Oswald', sans-serif !important;
-  }
-
-  .btn {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: 3em;
-    width: 6em;
-    font-size: 1.3rem;
-  }
-
-  .resetBtn {
-    font-size: 1rem;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 14%;
-  }
-
-  #credits {
-    margin-top: 12%;
-    color: #3a9679;
-  }
-
-  .btn-primary {
-    background-color: #5352ed !important;
-    border-color: #5352ed !important;
-  }
-
 
   /* slideout.js css */
 
@@ -998,20 +921,133 @@ ul > li {
   outline: none;
 }
 
+  .instructions {
+    max-width: 48% !important;
+    display: inline-block;
+  }
+
+  #instructiontext {
+    font-family: 'Market_Deco', Arial, sans-serif;
+    font-weight: 300;
+    color: ##2f3542;
+    font-size: 28px !important;
+  }
+
+  #instructiontext h2 {
+    margin-bottom: 5%;
+    font-family: 'Market_Deco', Arial, sans-serif;
+    font-weight: 400;
+    color: #ff4757;
+    font-size: 68px;
+    letter-spacing: -1;
+  }
+
+  #notetext {
+    margin-top: 2%;
+    font-size: 14px;
+  }
+
+  #mainTable {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 30px !important;
+    width: 610px !important;
+    table-layout: fixed !important;
+  }
+
+  #mainTable > td {
+    width: 190px !important
+  }
+
+  td#leftField {
+    word-wrap: break-word !important;
+    max-width: 190px !important;
+  }
+
+  .middleField {
+    word-wrap: break-word !important;
+    min-width: 120px !important;
+    max-width: 120px !important;
+  }
+
+  td#rightField {
+    word-wrap: break-word !important;
+    max-width: 190px !important;
+  }
+
+
+  .picktable > tr {
+    height: 120px !important;
+  }
+
+  .resulttable {
+    line-height: normal !important;
+    width: 350px !important;
+    font-size: 28px !important;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    color: #2f3542;
+  }
+
+  .softreset{
+    text-align: center;
+    max-width: 68% !important;
+    display: inline-block;
+  }
+
+  .resulttable {
+    height: 250px !important;
+    margin-bottom: 8% !important;
+  }
+
+  #resultField {
+    font-family: 'Oswald', sans-serif !important;
+  }
+
+  .btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 3em;
+    width: 6em;
+    font-size: 1.3rem;
+  }
+
+  .resetBtn {
+    font-size: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 7%;
+  }
+
+  #credits {
+    margin-top: 12%;
+    color: #3a9679;
+  }
+
+  .btn-primary {
+    background-color: #5352ed !important;
+    border-color: #5352ed !important;
+  }
+
+
   @media only screen and (min-width: 992px) {
 
-    body{
-      font-family: 'Market_Deco', Arial, sans-serif;
-      font-weight: 300;
-      color: #2f3542;
-      background-color: #fff !important;
+    body {
+      background-color: #f1f2f6 !important;
       height: 100% !important;
       display: table;
-      align-items: center;
-      vertical-align: middle;
+      align-items: center !important;
+      vertical-align: middle !important;
+      margin-top: 4%;
+      width: 100% !important;
+      margin-bottom: 4%;
     }
 
-    .allcontent {
+    .customize {
+      max-width: 68%;
+      margin-left: auto !important;
+      margin-right: auto !important;
       display: table-cell;
       vertical-align: middle;
     }
@@ -1042,7 +1078,7 @@ ul > li {
 
     .softreset{
       text-align: center;
-      margin-bottom: 6% !important;
+      margin-bottom: 2% !important;
     }
 
     .resetBtn {
@@ -1056,6 +1092,19 @@ ul > li {
       background-color: #5352ed !important;
       border-color: #5352ed !important;
     }
+
+  }
+
+  /* IPAD SCREENS*/
+  @media all and (min-device-width: 868px) and (max-device-width: 1366px) {
+
+
+
+  }
+
+  /* IPHONE X */
+  @media all and (min-device-width: 320px) and (max-device-width: 768px) {
+
 
   }
 
