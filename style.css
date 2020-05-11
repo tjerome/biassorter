@@ -263,6 +263,7 @@ ul > li {
 
 .bottomHalf {
     width: 100% !important;
+    margin-top: 15%;
 }
 
 .displayNameList {
@@ -271,25 +272,9 @@ ul > li {
 }
 
 #pText {
-    width: 33% !important;
-    height: 300px;
-    background-color: green;
+    width: 50% !important;
 
 }
-
-#pText2 {
-    width: 33% !important;
-    background-color: green;
-    height: 300px;
-
-}
-
-#pText3 {
-    width: 33% !important;
-    height: 300px;
-    background-color: green;
-}
-
 
   /* IPAD SCREENS*/
   @media all and (min-device-width: 868px) and (max-device-width: 1366px) {

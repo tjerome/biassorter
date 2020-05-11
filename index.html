@@ -56,8 +56,6 @@
 
         <div class="displayNameList">
           <p id="pText"></p>
-          <p id="pText2"></p>
-          <p id="pText3"></p>
         </div>
       </div>
   
@@ -104,18 +102,15 @@ function addCustom(){
    // append data to array
    namMember.push(inputText);
 
-  var pval = "</br>"
-  //  var pval = "";
+   var pval = "";
 
-  //  for(i = 0; i < namMember.length; i++){
-  //    pval = pval + namMember[i] + "</br>";
-  //    console.log(pval);
-  //  }
+   for(i = 0; i < namMember.length; i++){
+     pval = pval + namMember[i] + "</br>";
+     console.log(pval);
+   }
 
    // display array data
-   document.getElementById('pText').innerHTML = namMember.slice(0, 5);
-   document.getElementById('pText2').innerHTML = namMember.slice(5, 10);
-   document.getElementById('pText3').innerHTML = namMember.slice(10, 15);
+   document.getElementById('pText').innerHTML = pval + "</br>"
 
    // reset input field text
    document.getElementById('inputText').value = "";
