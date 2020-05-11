@@ -8,19 +8,15 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="slideout/dist/slideout.min.js"></script>
-
   <script data-ad-client="ca-pub-9408493636175953" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
-
 <meta http-equiv="Content-Style-Type" content="text/css">
-
 <meta http-equiv="Content-Script-Type" content="text/javascript">
 
 <script type="text/javascript">
 
-<!--
 
 var namMember = JSON.parse(sessionStorage.getItem('namMember'));
 
@@ -520,8 +516,6 @@ return str;
 
 font-size: 19px;
 
-font-family: 'Times New Roman', serif;
-
 text-align: center;
 
 vertical-align: middle;
@@ -598,8 +592,6 @@ width: 600px;
 
 margin: 0 auto;
 
-font-family: 'Times New Roman', erif;
-
 }
 
 </style>
@@ -633,8 +625,8 @@ font-family: 'Times New Roman', erif;
 
 <center id="instructiontext"><br /><br />
 <h2>RESULTS</h2>
-  You know the drill! For each comparison, choose who you like best between the two listed. <br />
-  <p id="notetext">NOTE: Hitting 'No Opinion' or 'I like both' too frequently will lower the accuracy of your ranking.</p><br /><br />
+  <!-- You know the drill! For each comparison, choose who you like best between the two listed. <br />
+  <p id="notetext">NOTE: Hitting 'No Opinion' or 'I like both' too frequently will lower the accuracy of your ranking.</p><br /><br /> -->
 </center>
 
 
@@ -647,7 +639,7 @@ font-family: 'Times New Roman', erif;
 
 <tbody class="picktable"><tr>
 
-<td id="battleNumber" colspan="3" style="padding-bottom: 10px;" style="text-align:center;"><b>battle #1<br>0% sorted</b></td>
+<td id="battleNumber" colspan="3" style="padding-bottom: 10px;" style="text-align:center;">battle #1<br>0% sorted</b></td>
 
 </tr>
 
@@ -688,7 +680,6 @@ no opinion
 
 <script type="text/javascript">
 
-<!--
 
 initList();
 
@@ -740,7 +731,7 @@ function addCustom(){
   </a>
 </div>
 
-<div id="credits">
+<!-- <div id="credits">
   <center>
     <small>
       <a id="credits"><p>credits</p></a>
@@ -752,7 +743,7 @@ function addCustom(){
  $('#credits').click(function(){
    alert("Used with permission. Code created by biasorter on Tumblr.");
  });
-</script>
+</script> -->
 
 <script>
 $('#reset').on('click', function() {
@@ -874,7 +865,7 @@ ul > li {
 
 .tooltips {
   font-size: 20px;
-  font-weight: 200;
+  font-weight: 100;
   line-height: 19px;
   display: inline-block;
   background: #2ed573 url('smile1.png') no-repeat right;
@@ -913,8 +904,8 @@ ul > li {
   left: 12px;
   outline: none;
   background: url('menu.png') no-repeat left center;
-  height: 70px;
-  width: 150px;
+  height: 90px;
+  width: 230px;
 }
 
 .btn-hamburger:focus {
@@ -929,7 +920,7 @@ ul > li {
   #instructiontext {
     font-family: 'Market_Deco', Arial, sans-serif;
     font-weight: 300;
-    color: ##2f3542;
+    color: #2f3542;
     font-size: 28px !important;
   }
 
@@ -938,7 +929,7 @@ ul > li {
     font-family: 'Market_Deco', Arial, sans-serif;
     font-weight: 400;
     color: #ff4757;
-    font-size: 68px;
+    font-size: 88px;
     letter-spacing: -1;
   }
 
@@ -951,7 +942,7 @@ ul > li {
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
     font-size: 30px !important;
-    width: 610px !important;
+    width: 750px !important;
     table-layout: fixed !important;
   }
 
@@ -975,29 +966,30 @@ ul > li {
     max-width: 190px !important;
   }
 
+  .picktable {
+    font-size: 38px !important;
+  }
 
   .picktable > tr {
-    height: 120px !important;
+    height: 140px !important;
   }
 
   .resulttable {
     line-height: normal !important;
-    width: 350px !important;
-    font-size: 28px !important;
+    height: 550px !important;
+    width: 500px !important;
+    font-size: 38px !important;
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
     color: #2f3542;
+    margin-bottom: 8% !important;
   }
 
   .softreset{
     text-align: center;
     max-width: 68% !important;
     display: inline-block;
-  }
-
-  .resulttable {
-    height: 250px !important;
-    margin-bottom: 8% !important;
+    font-size: 20px;
   }
 
   #resultField {
@@ -1008,9 +1000,9 @@ ul > li {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 3em;
+    height: 2.5em;
     width: 6em;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
   }
 
   .resetBtn {
@@ -1065,8 +1057,8 @@ ul > li {
       font-family: 'Market_Deco', Arial, sans-serif;
       font-weight: 400;
       color: #ff4757 !important;
-      font-size: 50px;
-      letter-spacing: -1;
+      font-size: 88px !important;
+      letter-spacing: -2;
     }
 
     #mainTable {
@@ -1096,20 +1088,6 @@ ul > li {
 
   }
 
-  /* IPAD SCREENS*/
-  @media all and (min-device-width: 868px) and (max-device-width: 1366px) {
-
-
-
-  }
-
-  /* IPHONE X */
-  @media all and (min-device-width: 320px) and (max-device-width: 768px) {
-
-
-  }
-
- }
 </style>
 
 </body>

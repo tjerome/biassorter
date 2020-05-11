@@ -1,0 +1,566 @@
+<html>
+
+<head>
+<meta name="viewport" content="user-scalable=0" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script data-ad-client="ca-pub-9408493636175953" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="slideout/dist/slideout.min.js"></script>
+
+</head>
+
+<body>
+
+<nav id="menu">
+  <ul>
+    <li><a id="menulink" href="/about">ABOUT</a></li>
+    <li><a id="menulink" href="/">CUSTOM</a></li>
+    <li><a id="menulink" href="/premade.html">PREMADE</a></li>
+    <li><a id="menulink" href="/lyrics">LYRICS</a></li>
+    <li><a id="menulink" href="/contact">CONTACT</a></li>
+  </ul>
+</nav>
+
+<div id="panel" class="customize" style="text-align:center">
+
+  <button class="btn-hamburger js-slideout-toggle">
+    <span class="tooltips">MORE</span>
+  </button>
+
+  <div id="contactArea">
+
+    <div class="textArea">
+
+      <div id="infotext">
+
+        <h2 id="title">CONTACT US</h2>
+        <p>Questions, comments, concerns? <br> Reach out to us and we'll get back with you shortly.<br>
+          All feedback is greatly appreciated! <br>
+          Thank you for using BIASSORTER!
+        </p></br>
+      </div>
+
+      <div id="formArea">
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="exampleInputEmail1">NAME/HANDLE</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">EMAIL</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+            <small id="emailHelp" class="form-text text-muted">If you'd like a reply back from us please leave your email. We'll never share your email with anyone else.</small>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">FEEDBACK/COMMENT</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary contactBtn">Submit</button>
+
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- slideout script  -->
+<script>
+  var slideout = new Slideout({
+    'panel': document.getElementById('panel'),
+    'menu': document.getElementById('menu'),
+    'padding': 400,
+    'tolerance': 70
+  });
+</script>
+
+<script>
+  $('.js-slideout-toggle').on('click', function() {
+      slideout.toggle();
+  });
+</script>
+
+
+<script type="text/javascript">
+
+var namMember = [];
+
+// Add variables to array for custom options
+
+function addCustom(){
+
+   // get value from text input
+   var inputText = document.getElementById('inputText').value;
+
+   // append data to array
+   namMember.push(inputText);
+
+   var pval = "";
+
+   for(i = 0; i < namMember.length; i++){
+     pval = pval + namMember[i] + ", ";
+   }
+
+   // display array data
+   document.getElementById('pText').innerHTML = pval + "</br>";
+
+   // reset input field text
+   document.getElementById('inputText').value = "";
+
+   // reset input field focus
+   document.getElementById('inputText').focus();
+
+}
+
+// next page button - storing the array to use again
+
+$('#nextPage').on('click', function(){
+    sessionStorage.setItem('namMember', JSON.stringify(namMember));
+});
+
+$(document).ready(function(){
+    $('#inputText').keypress(function(e){
+      if(e.keyCode==13)
+      $('.addItem').click();
+    });
+});
+
+</script>
+
+
+
+
+<!-- CSS move this to  -->
+<style>
+
+  html {
+    height: 100% !important;
+    width: 100% !important;
+  }
+
+  body {
+    background-color: #f1f2f6 !important;
+    height: 100% !important;
+    display: table;
+    width: 100% !important;
+    align-items: center !important;
+    vertical-align: middle !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  @media (min-width: 40em) {
+    .btn-hamburger{
+      top: 20px !important;
+      left: 20px !important;
+    }
+  }
+
+  .btn-hamburger {
+    border: none;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    outline: none;
+    background: url('menu.png') no-repeat left center;
+    height: 70px;
+    width: 150px;
+  }
+
+  .btn-hamburger:focus {
+    outline: none;
+  }
+
+
+  @font-face {
+    font-family: Arial;
+    src: url("Market_Deco.ttf");
+  }
+
+  h2{
+    font-family: 'Market_Deco', Arial, sans-serif;
+    color: #ff4757;
+  }
+
+  .btn {
+    background-color: #5352ed !important;
+    border-color: #5352ed !important;
+  }
+
+  .btn-primary {
+    background-color: #5352ed !important;
+    border-color: #5352ed !important;
+  }
+
+  .customize {
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  #contactArea {
+    width: 80%;
+    height: 70%;
+    display: inline-block;
+    border-radius: 8px 8px 8px 8px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    box-shadow: -3px 4px 5px 0px rgba(0,0,0,0.6);
+  }
+
+  .textArea {
+    width: 100% !important;
+    height: fit-content;
+  }
+
+
+  #title {
+    margin-top: 0 !important;
+    font-size: 60px;
+    letter-spacing: -5px;
+    margin-bottom: 4%;
+  }
+
+  #infotext {
+    display: inline-block;
+    text-align: center;
+    width: 80% !important;
+    height: 100%;
+    vertical-align: top;
+    padding-top: 14%;
+    font-size: 26px !important;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+    color: #2f3542;
+  }
+
+  #formArea {
+    display: inline-block;
+    width: 80% !important;
+    height: 100%;
+    padding-top: 9%;
+  }
+
+  .form-group {
+    text-align: left;
+  }
+
+  .contactBtn btn {
+    text-align: center;
+
+  }
+
+  .input-group {
+    max-width: 65% !important;
+    margin-top: 3%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .form-control {
+    font-size: 2rem !important;
+  }
+
+  .input-group-append {
+    max-width: 20%;
+  }
+
+  #inputText {
+    height: 2em;
+    text-align: center;
+  }
+
+  .btn-sm {
+    font-size: 1.3rem;
+  }
+
+  .addItem{
+    width: 100px !important;
+  }
+
+  #nextPage{
+    width: 70px !important;
+  }
+
+  #sortList {
+    font-size: 58px;
+    margin-top: 7%;
+    margin-bottom: 1% !important;
+    font-family: 'Market_Deco', Arial, sans-serif;
+    letter-spacing: -1;
+    color: #ff4757;
+  }
+
+  #buildList {
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+
+  #pText {
+    max-width: 50%;
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    margin-bottom: 3%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    color: #2f3542;
+  }
+
+  .go {
+    margin-top: 3%;
+  }
+
+  .startbtn {
+    height: 3em;
+    width: 6em;
+    font-size: 1.3rem;
+  }
+
+  p {
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+
+  form {
+    display: inline-block;
+  }
+
+  /* slideout.js css */
+
+  .slideout-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 400px;
+  min-height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  z-index: 0;
+  display: none;
+  background: rgb(83,82,237);
+  background: linear-gradient(180deg, rgba(83,82,237,1) 0%, rgba(255,127,80,1) 83%);
+}
+
+ul {
+  list-style-type: none;
+  font-family: 'Oswald', Arial;
+  font-weight: 400 !important;
+  font-size: 32px;
+  margin: 0;
+  position: absolute;
+  vertical-align: middle;
+  height: 50%;
+  top: 20%;
+  width: 100%;
+  text-align: center;
+}
+
+ul > li {
+  margin: 20px;
+}
+
+#menulink {
+  color: #fff !important;
+}
+
+#menulink:hover {
+  text-decoration: none;
+}
+
+.slideout-menu-left {
+  left: 0;
+}
+
+.slideout-menu-right {
+  right: 0;
+}
+
+.slideout-panel {
+  position: relative;
+  z-index: 1;
+  will-change: transform;
+  background-color: #fff;
+  background-color: #FFF;
+  min-height: 100vh;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+  display: block;
+}
+
+.tooltips {
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 19px;
+  display: inline-block;
+  background: #2ed573 url('smile1.png') no-repeat right;
+  color: #fff;
+  background-size: 18px 18px;
+  background-position: right 15px center;
+  padding: 10px 45px 10px 20px;
+  border-radius: 4px;
+  position: relative;
+  left: 50px;
+}
+
+.tooltips:before {
+  content: '';
+  display:inline-block;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 6px solid #2ed573;
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  margin-top: -6px;
+}
+
+  @media only screen and (min-width: 992px) {
+
+    body {
+      background-color: #f1f2f6 !important;
+      height: 100% !important;
+      display: table;
+      align-items: center !important;
+      vertical-align: middle !important;
+      margin-top: 4%;
+      margin-bottom: 4%;
+    }
+
+    .customize {
+      max-width: 68%;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    #title {
+      font-size: 96px !important;
+      letter-spacing: -5px;
+      margin-bottom: 2%;
+    }
+
+    #infotext {
+      max-width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 24px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      color: #11144c;
+    }
+
+    .input-group {
+      max-width: 50% !important;
+      margin-top: 2%;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    .form-control {
+      font-size: 2rem !important;
+    }
+
+    .input-group-append {
+      max-width: 20%;
+    }
+
+    #inputText {
+      height: 1.5em;
+      text-align: center;
+    }
+
+    .btn-sm {
+      font-size: 1.3rem;
+    }
+
+    .addItem{
+      width: 100px !important;
+    }
+
+    #nextPage{
+      width: 70px !important;
+    }
+
+    #sortList {
+      font-size: 32px;
+      margin-top: 4%;
+      margin-bottom: 3%;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 400;
+      letter-spacing: -1;
+      color: #11144c;
+    }
+
+    #buildList {
+      margin-top: 0%;
+      margin-bottom: 3%;
+    }
+
+    #pText {
+      font-size: 32px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+    }
+
+    .go {
+      margin-top: 0%;
+    }
+
+    .startbtn {
+      font-size: 1rem;
+    }
+
+    p {
+      margin-top: 3px;
+      margin-bottom: 3px;
+    }
+  }
+
+</style>
+
+
+<!-- Default Statcounter code for BIASSORTER
+http://www.biassorter.com -->
+<script type="text/javascript">
+var sc_project=11989179;
+var sc_invisible=1;
+var sc_security="99d903ab";
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="https://c.statcounter.com/11989179/0/99d903ab/1/"
+alt="Web Analytics"></a></div></noscript>
+<!-- End of Statcounter Code -->
+
+
+</body>
+
+</html>
