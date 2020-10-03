@@ -17,16 +17,15 @@
 <meta name=”Description” content=”The first fully customizable bias sorter! Add a list of anything you want to sort, click go, and share your results! 2020 Updates now in progress!”>
 </head>
 
-
 <body>
 
 <nav id="menu">
   <ul>
-    <li><a id="menulink" href="/">ABOUT</a></li>
+    <li><a id="menulink" href="/about">ABOUT</a></li>
     <li><a id="menulink" href="/">CUSTOM</a></li>
     <li><a id="menulink" href="/premade.html">PREMADE</a></li>
-    <li><a id="menulink" href="/">LYRICS</a></li>
-    <li><a id="menulink" href="/">CONTACT</a></li>
+    <li><a id="menulink" href="/lyrics">LYRICS</a></li>
+    <li><a id="menulink" href="/contact">CONTACT</a></li>
   </ul>
 </nav>
 
@@ -37,7 +36,11 @@
   </button>
 
   <div class="topHalf">
-      <h2 id="title"> BUILD YOUR<br/> SORTER </h2> 
+      <h2 id="title"> BUILD <br/> SORTER </h2> 
+  </div>
+
+  <div class="bottomHalf">
+    <div id="buildList">
 
       <div class="input-group mb-3">
         <input type="text" id="inputText" class="form-control" autocomplete="off" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
@@ -45,11 +48,8 @@
           <button type="button" class="btn btn-primary btn-sm addItem" onclick="addCustom();">ADD</button>
         </div>
       </div>
+  
       <span id="helptext">TIP! Press RETURN/ENTER to add an entry!</span>
-  </div>
-
-  <div class="bottomHalf">
-    <div id="buildList">
   
       <div class="sortlist">
         <h4 id="sortlist">CURRENT LIST</h4>
@@ -84,6 +84,7 @@
 <script>
   $('.js-slideout-toggle').on('click', function() {
       slideout.toggle();
+      slideout.disableTouch();
   });
 </script>
 
@@ -105,7 +106,7 @@ function addCustom(){
    var pval = "";
 
    for(i = 0; i < namMember.length; i++){
-     pval = pval + namMember[i] + ", ";
+     pval = pval + namMember[i] + "</br>";
      console.log(pval);
    }
 
