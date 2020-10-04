@@ -29,14 +29,14 @@
   </ul>
 </nav>
 
-<div id="panel" class="customize" style="text-align: center;">
+<div id="panel" class="customize" data-slideout-ignore style="text-align: center;">
 
   <button class="btn-hamburger js-slideout-toggle">
     <span class="tooltips">MORE</span>
   </button>
 
   <div class="topHalf">
-      <h2 id="title"> BUILD <br/> SORTER </h2> 
+      <h2 id="title"> BUILD YOUR<br/> SORTER </h2> 
   </div>
 
   <div class="bottomHalf">
@@ -84,7 +84,6 @@
 <script>
   $('.js-slideout-toggle').on('click', function() {
       slideout.toggle();
-      slideout.disableTouch();
   });
 </script>
 

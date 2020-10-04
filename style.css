@@ -268,13 +268,13 @@ ul > li {
   .topHalf {
     width: 100% !important;
     height: 40%;
-    padding-top: 10% !important;
+    padding-top: 15% !important;
 }
 
   .bottomHalf {
       width: 100% !important;
       height: 60%;
-      padding-top: 6% !important;
+      padding-top: 3% !important;
   }
 }
 
@@ -283,7 +283,7 @@ ul > li {
   .topHalf {
     width: 100% !important;
     height: 48%;
-    padding-top: 45%;
+    padding-top: 60%;
   }
 
   .bottomHalf {
@@ -298,8 +298,8 @@ ul > li {
   @media all and (min-device-width: 768px) and (min-device-height: 1024px) {
     .topHalf {
       width: 100% !important;
-      height: 48% !important;
-      padding-top: 28%;
+      height: 42% !important;
+      padding-top: 36%;
     }
   
     .bottomHalf {
@@ -313,13 +313,13 @@ ul > li {
 @media all and (min-device-width: 375px) and (max-device-width: 375px) and (min-device-height: 812px) {
   .topHalf {
     width: 100% !important;
-    height: 48%;
+    height: 42%;
     padding-top: 60%;
   }
 
   .bottomHalf {
       width: 100% !important;
-      height: 52%;
+      height: 58%;
       padding-top: 1%;
   }
 
