@@ -23,8 +23,8 @@
   .btn-hamburger {
     border: none;
     position: absolute;
-    top: 12px;
-    left: 12px;
+    top: 11px;
+    left: 11px;
     outline: none;
     background: url('menu.png') no-repeat left center;
     background-size: 50px 40px !important;
